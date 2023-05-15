@@ -138,6 +138,40 @@ body {
 	margin-bottom: 40px;
 }
 
+/*==============init spoler options======================*/
+.block._init .block__title {
+	cursor: pointer;
+	/* padding: 10px 40px 10px 10px; */
+}
+
+.block._init .block__title::before,
+.block._init .block__title::after {
+	content: "";
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	transition: transform 0.3s ease 0s;
+}
+
+.block._init .block__title::before {
+	transform: rotate(90deg);
+}
+
+.block._init .block__title._active::before {
+	transform: rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
 .block_1 {}
 
 .block_1 .block__item {
@@ -157,10 +191,6 @@ body {
 	background-color: rgb(62, 128, 66);
 }
 
-
-
-.block_2 {}
-
 .block__item {
 	padding: 20px;
 
@@ -174,4 +204,7 @@ body {
 	font-size: 28px;
 	font-weight: bold;
 	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+	text-align: left;
 }
